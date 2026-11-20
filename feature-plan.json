@@ -1,0 +1,64 @@
+{
+  "schema_version": 1,
+  "current_feature": "skill-naming-convention",
+  "features": [
+    {
+      "id": "skill-naming-convention",
+      "title": "Fix skill name colon to hyphen convention",
+      "status": "done",
+      "acceptance": [
+        "Skill names in SKILL.md files use only letters, numbers, hyphens, underscores, dots, and spaces",
+        "No skill names contain colons that would fail validation by co-pilot CLI or similar tools"
+      ],
+      "implementation": [
+        "skills/react-components/SKILL.md",
+        "skills/manage-design-system/SKILL.md",
+        "skills/extract-design-md/SKILL.md",
+        "skills/upload-to-stitch/SKILL.md"
+      ],
+      "tests": [
+        "tests/skill_naming_test.py"
+      ]
+    },
+    {
+      "id": "design-system-upload-path",
+      "title": "Fix upload path to use variable instead of relative path",
+      "status": "planned",
+      "acceptance": [
+        "SKILL.md examples use  or skill-relative paths",
+        "Commands work both from repo checkout and when plugin installed via marketplace"
+      ],
+      "implementation": [
+        "skills/manage-design-system/SKILL.md"
+      ],
+      "tests": []
+    },
+    {
+      "id": "design-md-live-url",
+      "title": "Add live URL input mode to extract-design-md skill",
+      "status": "planned",
+      "acceptance": [
+        "SKILL.md includes optional From a live URL section using Firecrawl API",
+        "Firecrawl branding/screenshot formats map to DESIGN.md sections",
+        "Source-code path remains default; Firecrawl optional"
+      ],
+      "implementation": [
+        "skills/extract-design-md/SKILL.md"
+      ],
+      "tests": []
+    },
+    {
+      "id": "schema-defs",
+      "title": "Add $defs to outputSchema in upload_design_md",
+      "status": "planned",
+      "acceptance": [
+        "outputSchema references resolvable $defs",
+        "ScreenInstance schema defined within schema"
+      ],
+      "implementation": [
+        "skills/upload-to-stitch/scripts/upload_to_stitch.py"
+      ],
+      "tests": []
+    }
+  ]
+}

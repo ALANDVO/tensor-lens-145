@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "current_feature": "skill-naming-convention",
+  "current_feature": "design-system-upload-path",
   "features": [
     {
       "id": "skill-naming-convention",
@@ -23,15 +23,18 @@
     {
       "id": "design-system-upload-path",
       "title": "Fix upload path to use variable instead of relative path",
-      "status": "planned",
+      "status": "done",
       "acceptance": [
-        "SKILL.md examples use  or skill-relative paths",
+        "SKILL.md uses ${CLAUDE_PLUGIN_ROOT} (or a skill-relative path) for the upload command",
+        "Referenced upload script path resolves to a real file in the checkout",
         "Commands work both from repo checkout and when plugin installed via marketplace"
       ],
       "implementation": [
         "skills/manage-design-system/SKILL.md"
       ],
-      "tests": []
+      "tests": [
+        "tests/upload_path_test.py"
+      ]
     },
     {
       "id": "design-md-live-url",

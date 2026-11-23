@@ -4,7 +4,7 @@ Each round completes one feature or repair. Future items are planned, not implem
 
 ## Current round
 
-skill-naming-convention
+design-system-upload-path
 
 ## Roadmap
 
@@ -22,13 +22,16 @@ Tests: `tests/skill_naming_test.py`
 
 ### design-system-upload-path — Fix upload path to use variable instead of relative path
 
-Status: planned
+Status: done
 
 Acceptance:
-- SKILL.md examples use  or skill-relative paths
+- SKILL.md uses ${CLAUDE_PLUGIN_ROOT} (or a skill-relative path) for the upload command
+- Referenced upload script path resolves to a real file in the checkout
 - Commands work both from repo checkout and when plugin installed via marketplace
 
 Implementation: `skills/manage-design-system/SKILL.md`
+
+Tests: `tests/upload_path_test.py`
 
 ### design-md-live-url — Add live URL input mode to extract-design-md skill
 

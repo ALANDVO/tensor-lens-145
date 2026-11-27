@@ -39,16 +39,19 @@
     {
       "id": "design-md-live-url",
       "title": "Add live URL input mode to extract-design-md skill",
-      "status": "planned",
+      "status": "done",
       "acceptance": [
         "SKILL.md includes optional From a live URL section using Firecrawl API",
         "Firecrawl branding/screenshot formats map to DESIGN.md sections",
         "Source-code path remains default; Firecrawl optional"
       ],
       "implementation": [
-        "skills/extract-design-md/SKILL.md"
+        "skills/extract-design-md/SKILL.md",
+        "skills/extract-design-md/scripts/extract_from_url.py"
       ],
-      "tests": []
+      "tests": [
+        "tests/extract_design_md_live_url_test.py"
+      ]
     },
     {
       "id": "schema-defs",

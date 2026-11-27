@@ -35,14 +35,16 @@ Tests: `tests/upload_path_test.py`
 
 ### design-md-live-url — Add live URL input mode to extract-design-md skill
 
-Status: planned
+Status: done
 
 Acceptance:
 - SKILL.md includes optional From a live URL section using Firecrawl API
 - Firecrawl branding/screenshot formats map to DESIGN.md sections
 - Source-code path remains default; Firecrawl optional
 
-Implementation: `skills/extract-design-md/SKILL.md`
+Implementation: `skills/extract-design-md/SKILL.md`, `skills/extract-design-md/scripts/extract_from_url.py`
+
+Tests: `tests/extract_design_md_live_url_test.py`
 
 ### schema-defs — Add $defs to outputSchema in upload_design_md
 
